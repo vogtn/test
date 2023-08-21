@@ -5,6 +5,7 @@ import HeadingContainer from './HeadingContainer';
 import ImageContainer from './ImageContainer';
 import LowerCopy from './LowerCopy';
 import ButtonContainer from './ButtonContainer';
+import BottomNavigation from './BottomNavigation';
 
 const MainContent = () => {
 
@@ -20,6 +21,7 @@ const MainContent = () => {
           <LowerCopy />
         </div>
         <ButtonContainer />
+        <BottomNavigation />
     </div>
   )
 }

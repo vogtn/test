@@ -259,11 +259,63 @@ div.content {
 
 
 
+/* Style the navigation menu */
+.bottomnav {
+  text-align: center;
+  overflow: hidden;
+  background-color: #2E3A86;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px 0px 8px 0px;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.bottomnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.bottomnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  padding: 10px;
+}
+
+/* Style the hamburger menu */
+.bottomnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.bottomnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.bottomnav{
+  display:none;
+}
+
+
+
+
 /* Responsive sizes */
 
 @media screen and (max-width: 1018px) {
   .outlined-button{
     margin-top: 40px;
+  }
+  .bottomnav{
+    display:none;
   }
 }
 
@@ -274,6 +326,9 @@ div.content {
   }
   .outlined-button{
     margin-top: 40px;
+  }
+  .bottomnav{
+    display:none;
   }
 }
 
@@ -298,7 +353,7 @@ div.content {
   div.content {margin-left: 0;}
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 599px) {
   .magnify-glass-svg{
     right: 257px;
   }
@@ -306,7 +361,9 @@ div.content {
     width: 275px;
   }
   .sidebar a {
-    text-align: center;
-    float: none;
+    display: none;
+  }
+  .bottomnav{
+    display:block;
   }
 }
