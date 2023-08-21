@@ -1,12 +1,14 @@
 // Container for buttons near the bottom
-import React, {useState} from 'react';
+import { FormattedMessage } from "react-intl";
+import { useIntl } from 'react-intl';
 
 const ButtonContainer = () =>{
+    const intl = useIntl();
 
     return (
         <div className="button-container">
-            <button className="filled-button">Button</button>
-            <button className="outlined-button">Button</button>
+            <button tabIndex={0} className="filled-button">{intl.formatMessage({ id: 'buttonCopy' })}</button>
+            <button className="outlined-button">{intl.formatMessage({ id: 'buttonCopy' })}</button>
         </div>
     );
 }

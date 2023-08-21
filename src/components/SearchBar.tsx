@@ -2,8 +2,13 @@
 import React, {useState} from 'react';
 import MagnifyGlass from '../Icons/MagnifyGlass';
 import ChevronIcon from '../Icons/ChevronIcon';
+import { IntlContext } from "./IntlContext";
+import { FormattedMessage } from "react-intl";
+import { IntlProvider, useIntl } from 'react-intl';
 
 const SearchBar = () =>{
+    const { switchToEnglish, switchToJapanese } = React.useContext(IntlContext);
+    const intl = useIntl();
 
     const updateDropDown = () =>{
         let dropdown = document.getElementById("myDropdown") as HTMLElement;
@@ -25,22 +30,15 @@ const SearchBar = () =>{
         if(e.currentTarget && e.currentTarget.attributes[0].value){
             switch(e.currentTarget.attributes[0].value) {
                 case "all":
-                  // code block
-                  setFilterContent("All");
-                  updateDropDown()
-                  break;
-                case "green":
-                  // code block
-                  setFilterContent("green")
-                  updateDropDown()
-                  break;
-                case "jpn":
-                // code block
-                    setFilterContent("jpn")
-                    updateDropDown()
+                    switchToEnglish();
+                    updateDropDown();
+                    setFilterContent("All");
                     break;
-                    default:
-                  // code block
+                case "jpn":
+                    switchToJapanese();
+                    updateDropDown();
+                    setFilterContent("jpn")
+                    break;
               }
         }
     }
@@ -49,7 +47,7 @@ const SearchBar = () =>{
     return (
         <div className="dropdown">
             <div className="input-hover-container">
-                <input autoComplete="off" className="search-input" type="text" placeholder="Search" id="myInput" />
+                <input autoComplete="off" className="search-input" type="text" placeholder={intl.formatMessage({ id: 'placeholderMessageId' })} id="myInput" />
                     <MagnifyGlass />
                 <button onClick={() => updateDropDown()} className={`dropbtn ${animate ? "active" : ""}`}>
                     <span className="content-filter"><strong>{filterContent}</strong></span>
@@ -58,7 +56,6 @@ const SearchBar = () =>{
             </div>
             <div id="myDropdown" className="dropdown-content">
                 <div data-value="all" onClick={(e) => updateSelectedValue(e)}>All</div>
-                <div data-value="green" onClick={(e) => updateSelectedValue(e)}>Theme: green</div>
                 <div data-value="jpn" onClick={(e) => updateSelectedValue(e)}>i18n: japanese</div>
             </div>
         </div>

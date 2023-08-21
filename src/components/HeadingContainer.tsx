@@ -1,11 +1,12 @@
 // Container for the header text and vertical bar
 import React, {useState} from 'react';
+import { FormattedMessage } from "react-intl";
 
-const HeadingContainer = () =>{
+const HeadingContainer = () =>{    
 
     return (
         <div className="heading-container">
-            <h1>Heading text here</h1>
+            <FormattedMessage id="header" tagName="h1" />
             <div className="vl"></div>
         </div>
     );

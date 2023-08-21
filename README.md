@@ -17,6 +17,8 @@ From the initial Interview I remember that it was important to stick to design a
 
 Things like, hover states for buttons, active states for the search bar, animations, and clickable "area" for the article content section, are all intentionally reflective of their counterpart on the nintendo domains to remove guessing work on my end. 
 
+For fun I added a language context switcher into the "all" dropdown. I like experimenting with i18n and thought Japanese would be a good start especially in this context.  (All is default for en, to respect design).
+
 ### What I would improve with more time or consultation from design:
 
 1. Responsive decisions: 
@@ -24,7 +26,7 @@ I made several decisions on the responsive aspects of design since the original 
 
 2. Accessibility: if navigation led to a real link, using associated href tags. 
 
-3. Themes/Internationalization: Adding additional themes (light/dark) for colors and i18n languages to the components would be the next step for further accessibility. 
+3. Themes/Internationalization: Adding additional themes (light/dark) for colors and more i18n languages to the components would be the next step for further accessibility. Consultation with language expert for proper text translations. 
 
 4. Styled components with custom CSS: in the sprit of a component based library, adding custom properties via css variables would be a necessary next step for customization. 
 
