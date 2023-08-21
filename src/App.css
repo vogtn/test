@@ -43,23 +43,6 @@ div.content {
   height: 1000px;
 }
 
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-
 /* Dropdown Button */
 .dropbtn {
   background-color: white;
@@ -86,8 +69,8 @@ div.content {
   box-sizing: border-box;
   background-position: 14px 12px;
   background-repeat: no-repeat;
-  font-size: 15px;
-  padding: 13px 56px 4px 32px;
+  font-size: 14px;
+  padding: 14px 56px 3px 32px;
   border: none;
   border-bottom: 1px solid #ddd;
 }
@@ -124,11 +107,12 @@ div.content {
   background-color: white;
   max-width: 100px;
   position:absolute;
-  right: 41px;
+  right: 0px;
   border: 1px solid #ddd;
   z-index: 1;
   font-size: 11px;
   font-weight: 700;
+  box-shadow: 1px 1px 6px #DFDFDF;
 }
 
 /* Links inside the dropdown */
@@ -149,13 +133,14 @@ div.content {
 .content-filter{
   display: inline-block;
   width: 40px;
+  font-size: 12px;
 }
 
 /* SVG magnify glass */
 .magnify-glass-svg{
-  position: relative;
-  right: 425px;
-  top: 2;
+  position: absolute;
+  right: 414px;
+  top: 15px;
 }
 
 .search-input:hover + .magnify-glass-svg{
@@ -265,4 +250,63 @@ div.content {
 .outlined-button:hover{
   transform: scale(1.1);
   background-color: rgb(233, 229, 229);
+}
+
+.clickable-article{
+  max-width: 540px;
+  cursor: pointer;
+}
+
+
+
+/* Responsive sizes */
+
+@media screen and (max-width: 1018px) {
+  .outlined-button{
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .image-container{
+    width: 300px;
+    height: 200px;
+  }
+  .outlined-button{
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .outlined-button{
+    margin-top: 40px;
+  }
+  #myInput {
+    width: 360px;
+  }
+  .magnify-glass-svg{
+    right: 344px;
+    top: 15px;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 0px;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 440px) {
+  .magnify-glass-svg{
+    right: 257px;
+  }
+  #myInput {
+    width: 275px;
+  }
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
 }

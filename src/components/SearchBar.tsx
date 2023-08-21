@@ -52,7 +52,7 @@ const SearchBar = () =>{
                 <input autoComplete="off" className="search-input" type="text" placeholder="Search" id="myInput" />
                     <MagnifyGlass />
                 <button onClick={() => updateDropDown()} className={`dropbtn ${animate ? "active" : ""}`}>
-                    <span className="content-filter">{filterContent}</span>
+                    <span className="content-filter"><strong>{filterContent}</strong></span>
                     <ChevronIcon animate={animate} />
                 </button>
             </div>
