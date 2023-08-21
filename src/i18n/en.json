@@ -4,10 +4,13 @@
     "boldTitleCopy": "Title copy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "secondaryCopy": "Article copy lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna lorem ipsum...",
     "linkCopy": "Read more",
-    "buttonCopy": "Button",
+    "buttonCopyEn": "English",
+    "buttonCopyJp": "Japanese",
     "sectionOneCopy": "Section 1",
     "sectionTwoCopy": "Section 2",
     "sectionThreeCopy": "Section 3",
     "sectionFourCopy": "Section 4",
-    "sectionFiveCopy": "Section 5"
+    "sectionFiveCopy": "Section 5",
+    "dropdownAll": "All",
+    "dropdownGames": "Games"
 }

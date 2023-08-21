@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 const ImageContainer = () =>{
 
     return (
-        <div className="image-container">
+        <div role="img" tabIndex={0} title="placeholder image" className="image-container">
         </div>
     );
 }

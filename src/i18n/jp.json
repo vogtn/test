@@ -4,10 +4,13 @@
     "boldTitleCopy": "Lorem ipsum の例コンテンツの内容ではなく、純粋にデザインを評価する場合にこれらの文章は役にたちます",
     "secondaryCopy": "では、日本語の場合はどうでしょう。前述のラテン文字とは違い、日本語の表記体系は非常に複雑です。",
     "linkCopy": "続きを読む",
-    "buttonCopy": "ボタン",
+    "buttonCopyEn": "英語",
+    "buttonCopyJp": "日本語",
     "sectionOneCopy": "セクション 1",
     "sectionTwoCopy": "セクション 2",
     "sectionThreeCopy": "セクション 3",
     "sectionFourCopy": "セクション 4",
-    "sectionFiveCopy": "セクション 5"
+    "sectionFiveCopy": "セクション 5",
+    "dropdownAll": "全て",
+    "dropdownGames": "ゲーム"
 }

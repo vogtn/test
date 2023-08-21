@@ -53,7 +53,7 @@ div.content {
   display: flex;
   position: absolute;
   right: 13px;
-  top: 14px;
+  top: 13px;
 }
 
 .dropbtn:hover{
@@ -72,18 +72,18 @@ div.content {
   font-size: 14px;
   padding: 14px 56px 3px 32px;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #242424;
 }
 
 /* The search field when it gets focus/clicked on */
 #myInput:focus {
   outline: none;
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid red;
 }
 
 #myInput:hover {
   outline: none;
-  border-bottom: 1px solid red;
+  border-bottom: 2px solid red;
 }
 
 #myInput:hover::placeholder{

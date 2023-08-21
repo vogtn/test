@@ -2,12 +2,9 @@
 import React, {useState} from 'react';
 import MagnifyGlass from '../Icons/MagnifyGlass';
 import ChevronIcon from '../Icons/ChevronIcon';
-import { IntlContext } from "./IntlContext";
-import { FormattedMessage } from "react-intl";
-import { IntlProvider, useIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 const SearchBar = () =>{
-    const { switchToEnglish, switchToJapanese } = React.useContext(IntlContext);
     const intl = useIntl();
 
     const updateDropDown = () =>{
@@ -30,18 +27,18 @@ const SearchBar = () =>{
         if(e.currentTarget && e.currentTarget.attributes[0].value){
             switch(e.currentTarget.attributes[0].value) {
                 case "all":
-                    switchToEnglish();
                     updateDropDown();
                     setFilterContent("All");
                     break;
-                case "jpn":
-                    switchToJapanese();
+                case "games":
                     updateDropDown();
-                    setFilterContent("jpn")
+                    setFilterContent("games")
                     break;
               }
         }
     }
+
+    const translatedFilter = filterContent === "All" ? intl.formatMessage({ id: 'dropdownAll' }) : intl.formatMessage({ id: 'dropdownGames' });
 
 
     return (
@@ -50,13 +47,13 @@ const SearchBar = () =>{
                 <input autoComplete="off" className="search-input" type="text" placeholder={intl.formatMessage({ id: 'placeholderMessageId' })} id="myInput" />
                     <MagnifyGlass />
                 <button onClick={() => updateDropDown()} className={`dropbtn ${animate ? "active" : ""}`}>
-                    <span className="content-filter"><strong>{filterContent}</strong></span>
+                    <span className="content-filter"><strong>{translatedFilter}</strong></span>
                     <ChevronIcon animate={animate} />
                 </button>
             </div>
             <div id="myDropdown" className="dropdown-content">
-                <div data-value="all" onClick={(e) => updateSelectedValue(e)}>All</div>
-                <div data-value="jpn" onClick={(e) => updateSelectedValue(e)}>i18n: japanese</div>
+                <div data-value="all" onClick={(e) => updateSelectedValue(e)}>{intl.formatMessage({ id: 'dropdownAll' })}</div>
+                <div data-value="games" onClick={(e) => updateSelectedValue(e)}>{intl.formatMessage({ id: 'dropdownGames' })}</div>
             </div>
         </div>
     );
